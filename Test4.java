@@ -6,6 +6,10 @@ public class Test4 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your integer");
         int grade = input.nextInt();
+        if(grade>100|grade<0){
+            System.out.println("Error");
+            return 0;
+        } 
         switch(grade/10){
             case 10:
             case 9:
@@ -20,9 +24,18 @@ public class Test4 {
             case 6:
                 System.out.println("D");
                 break;
-            default:
+            case 5:
+            case 4:
+            case 3:
+            case 2:
+            case 1:
+            case 0:
                 System.out.println("E");
                 break;
+            default:
+                System.out.println("Error");
+                break;
+            
         }
     }
 }
